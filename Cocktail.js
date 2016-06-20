@@ -4,7 +4,7 @@
 (function(factory) {
     if (typeof require === 'function' && typeof module !== 'undefined' && module.exports) {
         module.exports = factory(require('underscore'));
-    } else if (typeof define === 'function') {
+    } else if (typeof define === 'function' && define.amd) {
         define(['underscore'], factory);
     } else {
         this.Cocktail = factory(_);
